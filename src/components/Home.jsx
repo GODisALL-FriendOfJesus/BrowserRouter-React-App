@@ -1,7 +1,14 @@
 import React from "react";
+import Navbar from '../components/Navbar';
+import { BrowserRouter,Routes,Route } from "react-router";
+
 
 export default function Home(){ 
-<>
-<h1>This HOME PAge</h1>
-</>
+return(
+    <BrowserRouter>
+    <Routes>
+        <Route path="/" element={<Navbar/>}/>
+    </Routes>
+    </BrowserRouter>
+)
 }

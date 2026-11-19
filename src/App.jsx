@@ -4,6 +4,7 @@ import{BrowserRouter,Routes,Route} from 'react-router';
 import About from './components/About';
 import Home from './components/Home';
 import Services from './components/Services';
+import Navbar from './components/Navbar';
 
 
 
@@ -11,8 +12,10 @@ import Services from './components/Services';
 export default function App(){
   return(
 
-    <>
-    
-  </>
+<BrowserRouter>
+<Routes>
+  <Route path='/' element={<Navbar /> } />
+</Routes>
+</BrowserRouter>
   )
 }
