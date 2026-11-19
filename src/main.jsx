@@ -1,0 +1,17 @@
+import { createRoot } from "react-dom/client"
+import {BrowserRouter, Routes,Route} from "react-router"
+
+import App from "./App"
+const root = createRoot(document.getElementById("root"))
+
+ 
+
+root.render(
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />} />
+    </Routes>
+     
+    </BrowserRouter>
+    
+)
