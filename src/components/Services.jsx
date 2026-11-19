@@ -15,3 +15,22 @@ const servicesList = [
     description: 'Structured relational databases and reliable server-side logic.',
   },
 ];
+export default function Services() {
+  return (
+    <section>
+      <div className="hero">
+        <h1>Our Services</h1>
+        <p>Here is what we offer to help bring your projects to life.</p>
+      </div>
+
+      <div className="grid">
+        {servicesList.map((service) => (
+          <article key={service.id} className="card">
+            <h3>{service.title}</h3>
+            <p>{service.description}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
