@@ -1,21 +1,16 @@
-import { Link, NavLink } from 'react-router';
+import { NavLink } from "react-router";
 
 export default function Navbar() {
-  const getLinkClass = ({ isActive }) => (isActive ? 'nav-link active' : 'nav-link');
-
   return (
-    <header className="navbar">
-      <Link to="/" className="brand">
-        DevStudio
-      </Link>
-      <nav className="nav-links" aria-label="Primary Navigation">
-        <NavLink to="/" end className={getLinkClass}>
+    <header className="site-header">
+      <nav className="nav">
+        <NavLink to="/" end className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
           Home
         </NavLink>
-        <NavLink to="/about" className={getLinkClass}>
+        <NavLink to="/about" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
           About
         </NavLink>
-        <NavLink to="/services" className={getLinkClass}>
+        <NavLink to="/services" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
           Services
         </NavLink>
       </nav>

@@ -1,36 +1,24 @@
-const servicesList = [
-  {
-    id: 1,
-    title: 'Web Development',
-    description: 'Full-stack web applications built with React, JavaScript, and modern APIs.',
-  },
-  {
-    id: 2,
-    title: 'UI/UX Design',
-    description: 'Clean, intuitive, and mobile-first user interfaces designed for great usability.',
-  },
-  {
-    id: 3,
-    title: 'Database & Backend',
-    description: 'Structured relational databases and reliable server-side logic.',
-  },
-];
-export default function Services() {
-  return (
-    <section>
-      <div className="hero">
-        <h1>Our Services</h1>
-        <p>Here is what we offer to help bring your projects to life.</p>
-      </div>
+import { useState } from "react";
+import { Link } from "react-router";
 
+const SERVICES = [
+  { slug: "web-apps", title: "Web Applications", category: "engineering", summary: "Responsive interfaces built with React." },
+  { slug: "ui-systems", title: "UI Component Systems", category: "design", summary: "Reusable components and layout patterns." },
+  { slug: "api-integration", title: "API Integration", category: "engineering", summary: "Connecting frontend views to backend data." },
+];
+
+export default function Services() {
+  const [filter, setFilter] = useState("all");
+
+  const visibleServices =
+    filter === "all" ? SERVICES : SERVICES.filter((item) => item.category === filter);
+
+  return (
+    <section className="page">
+      
       <div className="grid">
-        {servicesList.map((service) => (
-          <article key={service.id} className="card">
-            <h3>{service.title}</h3>
-            <p>{service.description}</p>
-          </article>
-        ))}
-      </div>
+   Hello this is Services page
+         </div>
     </section>
   );
 }
