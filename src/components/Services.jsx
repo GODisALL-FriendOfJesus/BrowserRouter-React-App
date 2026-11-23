@@ -1,59 +1,39 @@
-import { useState,useEffect } from "react";
-
- 
-
-export default function Services() {
-   
-
-  
-
-
-
- 
+import { useFetchAPi } from "./Fetchapi.js";
 
 const DEFAULT_POSTS_URL = "https://jsonplaceholder.typicode.com/posts";
 
-// export function useFetchAPi(url = DEFAULT_POSTS_URL) {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+export default function Services() {
+  const { data, loading, error } = useFetchAPi(DEFAULT_POSTS_URL);
 
-  useEffect(() => {
-    if (!url) return;
+  if (loading) {
+    return (
+      <section className="page">
+        <p>Loading...</p>
+      </section>
+    );
+  }
 
-    const controller = new AbortController();
-    setLoading(true);
-    setError(null);
+  if (error) {
+    return (
+      <section className="page">
+        <p>Error: {error}</p>
+      </section>
+    );
+  }
 
-    fetch(url, { signal: controller.signal })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`Request failed with status ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((result) => {
-        setData(result);
-        setLoading(false);
-      })
-      .catch((err) => {
-        if (err.name !== "AbortError") {
-          setError(err.message);
-          setLoading(false);
-        }
-      });
-
-    return () => controller.abort();
-  }, [url]);
-
-  return { data, loading, error };
-//   return (
-//     <section className="page">
-      
-//       <div className="grid">
-//    Hello this is Services page
-//          </div>
-//     </section>
-//   );
-
+  return (
+    <section className="page">
+      <div className="grid">
+        <h2>Services & Posts</h2>
+        <ul>
+          {data.map((post) => (
+            <li key={post.id}>
+              <strong>{post.title}</strong>
+              <p>{post.body}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
 }
