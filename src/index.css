@@ -15,7 +15,7 @@
 }
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family:  sans-serif;
   background-color: var(--bg);
   color: var(--text);
   line-height: 1.6;
@@ -54,7 +54,7 @@ body {
 
 .nav-link {
   text-decoration: none;
-  color: var(--muted);
+  
   font-weight: 500;
   padding: 0.4rem 0.75rem;
   border-radius: 0.375rem;
@@ -62,7 +62,7 @@ body {
 }
 
 .nav-link:hover {
-  color: var(--primary);
+
   background-color: #eff6ff;
 }
 
@@ -144,17 +144,11 @@ body {
 
 /* Footer */
 .footer {
-  background: var(--surface);
-  border-top: 1px solid var(--border);
+  background: gray;
+  border-top: 20px solid ;
   text-align: center;
   padding: 1.25rem;
   color: var(--muted);
   font-size: 0.9rem;
 }
-2. src/main.jsx
-JavaScript
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import { BrowserRouter } from 'react-router';
-import App from './App';
-import './index.css';
+ 
