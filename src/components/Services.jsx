@@ -36,79 +36,79 @@ const servicesList = [
 const categories = ['All', 'Development', 'Design', 'Consulting'];
 
 export default function Services() {
-//   const [selectedCategory, setSelectedCategory] = useState('All');
-//   const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
 
-//   const filteredServices = servicesList.filter((service) => {
-//     const matchesCategory =
-//       selectedCategory === 'All' || service.category === selectedCategory;
-//     const matchesSearch =
-//       service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-//       service.description.toLowerCase().includes(searchQuery.toLowerCase());
+  const filteredServices = servicesList.filter((service) => {
+    const matchesCategory =
+      selectedCategory === 'All' || service.category === selectedCategory;
+    const matchesSearch =
+      service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      service.description.toLowerCase().includes(searchQuery.toLowerCase());
 
-    //return matchesCategory && matchesSearch;
+    return matchesCategory && matchesSearch;
   });
 
-  return (
-    <section>
-      <div className="hero">
-        <h1>Our Services</h1>
-        <p>Filter by category or search to find the exact service you need.</p>
-      </div>
+//   return (
+//     <section>
+//       <div className="hero">
+//         <h1>Our Services</h1>
+//         <p>Filter by category or search to find the exact service you need.</p>
+//       </div>
 
-      {/* Filter Controls */}
-      <div className="filter-bar">
-        <div className="">
-          {categories.map((category) => (
-            <button
-              key={category}
-              type="button"
-              onClick={() => setSelectedCategory(category)}
-              className={
-                selectedCategory === category ? 'filter-btn active' : 'filter-btn'
-              }
-            >
-              {category}
-            </button>
-          ))}
-        </div>
+//       {/* Filter Controls */}
+//       <div className="filter-bar">
+//         <div className="">
+//           {categories.map((category) => (
+//             <button
+//               key={category}
+//               type="button"
+//               onClick={() => setSelectedCategory(category)}
+//               className={
+//                 selectedCategory === category ? 'filter-btn active' : 'filter-btn'
+//               }
+//             >
+//               {category}
+//             </button>
+//           ))}
+//         </div>
 
-        <input
-          type="search"
-          placeholder="Search services..."
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          className="search-input"
-          aria-label="Search services"
-        />
-      </div>
+//         <input
+//           type="search"
+//           placeholder="Search services..."
+//           value={searchQuery}
+//           onChange={(e) => setSearchQuery(e.target.value)}
+//           className="search-input"
+//           aria-label="Search services"
+//         />
+//       </div>
 
-      {/* Filtered Results */}
-      {/* {filteredServices.length > 0 ? (
-        <div className="grid">
-          {filteredServices.map((service) => (
-            <article key={service.id} className="card">
-              <span className="badge">{service.category}</span>
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
-            </article>
-          ))}
-        </div>
-      ) : (
-        <div className="empty-state">
-          <p>No services match your filter. Try another category or keyword.</p>
-          <button
-            type="button"
-            className="btn"
-            onClick={() => {
-              setSelectedCategory('All');
-              setSearchQuery('');
-            }}
-          >
-            Reset Filters
-          </button>
-        </div> */}
-     // )}
-   // </section>
-  );
-}
+//       {/* Filtered Results */}
+//       {/* {filteredServices.length > 0 ? (
+//         <div className="grid">
+//           {filteredServices.map((service) => (
+//             <article key={service.id} className="card">
+//               <span className="badge">{service.category}</span>
+//               <h3>{service.title}</h3>
+//               <p>{service.description}</p>
+//             </article>
+//           ))}
+//         </div>
+//       ) : (
+//         <div className="empty-state">
+//           <p>No services match your filter. Try another category or keyword.</p>
+//           <button
+//             type="button"
+//             className="btn"
+//             onClick={() => {
+//               setSelectedCategory('All');
+//               setSearchQuery('');
+//             }}
+//           >
+//             Reset Filters
+//           </button>
+//         </div> */}
+//      // )}
+//    // </section>
+//   );
+// }
