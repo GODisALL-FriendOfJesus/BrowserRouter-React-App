@@ -81,10 +81,10 @@ onChange={(e) => setSearchQuery(e.target.value)}
            className="search-input"
            aria-label="Search services"
          />
-                </div> */}
+                </div> 
 
-//       {/* Filtered Results */}
-//       {/* {filteredServices.length > 0 ? (
+      {/* Filtered Results */}
+       {/* {filteredServices.length > 0 ? (
 //         <div className="grid">
 //           {filteredServices.map((service) => (
 //             <article key={service.id} className="card">
