@@ -49,29 +49,29 @@ export default function Services() {
     return matchesCategory && matchesSearch;
   });
 
-//   return (
-//     <section>
-//       <div className="hero">
-//         <h1>Our Services</h1>
-//         <p>Filter by category or search to find the exact service you need.</p>
-//       </div>
+  return (
+    <section>
+      <div className="hero">
+        <h1>Our Services</h1>
+        <p>Filter by category or search to find the exact service you need.</p>
+      </div>
 
-//       {/* Filter Controls */}
-//       <div className="filter-bar">
-//         <div className="">
-//           {categories.map((category) => (
-//             <button
-//               key={category}
-//               type="button"
-//               onClick={() => setSelectedCategory(category)}
-//               className={
-//                 selectedCategory === category ? 'filter-btn active' : 'filter-btn'
-//               }
-//             >
-//               {category}
-//             </button>
-//           ))}
-//         </div>
+      {/* Filter Controls */}
+      <div className="filter-bar">
+        <div className="">
+          {categories.map((category) => (
+            <button
+              key={category}
+              type="button"
+              onClick={() => setSelectedCategory(category)}
+              className={
+                selectedCategory === category ? 'filter-btn active' : 'filter-btn'
+              }
+            >
+              {category}
+            </button>
+          ))}
+        </div>
 
 //         <input
 //           type="search"
