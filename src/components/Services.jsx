@@ -73,15 +73,15 @@ export default function Services() {
           ))}
         </div>
 
-//         <input
-//           type="search"
-//           placeholder="Search services..."
-//           value={searchQuery}
-//           onChange={(e) => setSearchQuery(e.target.value)}
-//           className="search-input"
-//           aria-label="Search services"
-//         />
-//       </div>
+         <input     
+          type="search"
+              placeholder="Search services..."
+   value={searchQuery}
+onChange={(e) => setSearchQuery(e.target.value)}
+           className="search-input"
+           aria-label="Search services"
+         />
+                </div> */}
 
 //       {/* Filtered Results */}
 //       {/* {filteredServices.length > 0 ? (
