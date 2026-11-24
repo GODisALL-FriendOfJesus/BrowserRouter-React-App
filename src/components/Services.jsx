@@ -85,30 +85,28 @@ onChange={(e) => setSearchQuery(e.target.value)}
 
       {/* Filtered Results */}
        {/* {filteredServices.length > 0 ? (
-//         <div className="grid">
-//           {filteredServices.map((service) => (
-//             <article key={service.id} className="card">
-//               <span className="badge">{service.category}</span>
-//               <h3>{service.title}</h3>
-//               <p>{service.description}</p>
-//             </article>
-//           ))}
-//         </div>
-//       ) : (
-//         <div className="empty-state">
-//           <p>No services match your filter. Try another category or keyword.</p>
-//           <button
-//             type="button"
-//             className="btn"
-//             onClick={() => {
-//               setSelectedCategory('All');
-//               setSearchQuery('');
-//             }}
-//           >
-//             Reset Filters
-//           </button>
-//         </div> */}
-//      // )}
-//    // </section>
-//   );
-// }
+        <div className="grid">
+           {filteredServices.map((service) => (
+             <article key={service.id} className="card">               <span className="badge">{service.category}</span>
+       <h3>{service.title}</h3>
+               <p>{service.description}</p>
+             </article>
+           ))}
+         </div>       ) : (
+        <div className="empty-state">
+           <p>No services match your filter. Try another category or keyword.</p>
+           <button
+             type="button"
+             className="btn"
+             onClick={() => {
+               setSelectedCategory('All');
+               setSearchQuery('');
+             }}
+           >
+             Reset Filters
+           </button>
+         </div> */}
+       )}
+ </section>
+   );
+ }
